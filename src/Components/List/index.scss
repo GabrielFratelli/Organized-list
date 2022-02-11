@@ -1,0 +1,167 @@
+.List {
+    margin: 20px 0;
+    padding: 0;
+    position: relative;
+  
+    &-completed,
+    &-in-progress,
+    &-removed {
+      margin: 0 -20px;
+      padding: 0;
+      width: 100%;
+      list-style-type: none;
+      display: none;
+  
+      &-item {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        border-bottom: 1px solid #EDEDED;
+  
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+  
+      &--show {
+        display: block;
+      }
+  
+      &--completed,
+      &--removed {
+        display: none;
+      }
+    }
+  
+    &-completed {
+      &-item {
+        padding: 15px 20px 11px 20px;
+  
+        &-check {
+          padding: 0 5px;
+        }
+  
+        &-label {
+          flex: 2 1 0;
+          padding: 4px 0 2px 20px;
+          font-size: 18px;
+          width: 100%;
+          color: #323232;
+          text-decoration-line: line-through;
+        }
+      }
+    }
+  
+    &-in-progress {
+      &-item {
+        padding: 15px 20px 5px 20px;
+        
+        &:hover {
+          cursor: pointer;
+          background: #FFFFFF;
+          box-shadow: 0px 3px 6px 1px rgba(0, 0, 0, 0.15);
+          border-radius: 5px;
+        }
+  
+        &-complete {
+          padding: 0 5px;
+  
+          &:hover &--default {
+            display: none;
+          }
+  
+          &:hover &--hovered {
+            display: block;
+          }
+  
+          &--hovered {
+            display: none;
+          }
+        }
+  
+        &-edit {
+          flex: 2 1 0;
+          padding-left: 20px;
+  
+          input {
+            font-size: 18px;
+            width: 100%;
+            border: none;
+            padding: 3px 0;
+            color: #323232;
+            outline: none;
+          }
+        }
+  
+        &-remove {
+          padding: 0;
+          margin: -5px 0 0 10px;
+  
+          &:hover &--default {
+            display: none;
+          }
+  
+          &:hover &--hovered {
+            display: block;
+          }
+  
+          &--hovered {
+            display: none;
+          }
+        }
+      }
+    }
+  
+    &-removed {
+      &-item {
+        padding: 15px 20px 11px 20px;
+  
+        &-restore {
+          padding: 0 5px;
+          cursor: pointer;
+  
+          &:hover &--default {
+            display: none;
+          }
+  
+          &:hover &--hovered {
+            display: block;
+          }
+  
+          &--hovered {
+            display: none;
+          }
+        }
+  
+        &-label {
+          flex: 2 1 0;
+          padding: 4px 0 2px 20px;
+          font-size: 18px;
+          width: 100%;
+          color: #323232;
+        }
+      }
+    }
+  }
+  
+  @media (max-width: 800px) {
+    .List {
+      &-in-progress {
+        &-item {
+          &-edit {
+            input {
+              padding: 0;
+            }
+          }
+        }
+      }
+  
+      &-removed {
+        &-item {
+          &-label {
+            padding: 2px 0 2px 20px;
+          }
+        }
+      }
+    }
+  }
