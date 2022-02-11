@@ -1,4 +1,4 @@
-import './index.scss'
+// import './index.sass'
 
 const Footer = () => {
   const today = new Date()

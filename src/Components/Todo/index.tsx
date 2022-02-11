@@ -6,10 +6,10 @@ import React, {
   } from 'react'
   import { TodoState } from '../interfaces'
   import Calendar from '../Calendar'
-  import ListNavigation from '../ListNavigation/indes'
+  import ListNavigation from '../ListNavigation'
   import List from '../List'
   import Footer from '../Footer'
-  import './index.scss'
+  // import './index.sass'
   
   class Todo extends React.Component<{}, TodoState> {
     listItemEditInput: HTMLInputElement | null;
