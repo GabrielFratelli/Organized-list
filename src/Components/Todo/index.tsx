@@ -9,7 +9,7 @@ import React, {
   import ListNavigation from '../ListNavigation'
   import List from '../List'
   import Footer from '../Footer'
-  // import './index.sass'
+  import './index.scss'
   
   class Todo extends React.Component<{}, TodoState> {
     listItemEditInput: HTMLInputElement | null;
@@ -39,14 +39,9 @@ import React, {
   
       this.state = {
         items: {
-          completed: [
-            'Build a modern To Do app'
-          ],
+          completed: [],
           inProgress: [
-            'Workout for 30 minutes at the gym',
-            'Buy groceries (milk, vegetables, fruits, fish)',
-            'Clean the house and backyard',
-            'Take the car to the auto shop for an oil change',
+            'Task example.',
           ],
           removed: [],
         },

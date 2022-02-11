@@ -1,5 +1,5 @@
 import { ChangeEvent, FocusEvent, KeyboardEvent } from 'react'
-// import './index.sass'
+import './index.scss'
   
   const NewItem = ({
     handleNewItemInputOnChange,

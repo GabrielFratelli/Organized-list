@@ -1,4 +1,4 @@
-// import './index.sass'
+import './index.scss'
 
 const Calendar = () => {
   const now = new Date()

@@ -1,13 +1,11 @@
-// import './index.sass'
+import React from "react"
+import './index.scss'
 
-const Footer = () => {
-  const today = new Date()
-  
+export default function Footer() {
+  const today = new Date() 
   return (
     <div className="Footer">
-      <a href="https://rabyyuson.dev/">{today.getFullYear()}. Raby Yuson.</a>
+      <a href="https://github.com/GabrielFratelli/organized-list">{today.getFullYear()}. Gabriel Fratelli.</a>
     </div>
   )
-}
-
-export default Footer
+  }

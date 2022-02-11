@@ -1,5 +1,5 @@
 import { MouseEvent } from 'react'
-// import './index.sass'
+import './index.scss'
 
 const ListNavigation = ({
   items,
